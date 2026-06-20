@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memory Wall • My Life Garden</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+</head>
+<body>
+<!-- Stickers -->
+<div class="sticker sticker-lg float" style="top:20px;left:20px;">
+<img src="https://i.ibb.co/S42SxrYN/IMG-0225.png">
+</div>
+<div class="sticker sticker-md wiggle" style="top:120px;right:30px;">
+<img src="https://i.ibb.co/35NtcJCP/IMG-0223.png">
+</div>
+<div class="page">
+<header class="scrap-header">
+<img class="decor-left float" src="https://i.ibb.co/9mXV9pxd/IMG-0215.png">
+<img class="decor-right float" src="https://i.ibb.co/ZRjBhP4H/IMG-0218.png">
+<img class="decor-bottom wiggle" src="https://i.ibb.co/Xr6VTjNm/IMG-0221.png">
+<h1 class="page-title">⭐ Memory Wall</h1>
+<p class="page-subtitle">Your collage of life moments</p>
+</header>
+<!-- Navigation -->
+<section class="paper" style="text-align:center;margin-bottom:40px;">
+<a href="index.html"><button class="scrap-btn">🏠 Home</button></a>
+<a href="planner.html"><button class="scrap-btn">📅 Planner</button></a>
+<a href="reflections.html"><button class="scrap-btn">📝 Reflections</button></a>
+</section>
+<!-- Form -->
+<section class="paper paper-appear">
+<h2>➕ Add Memory</h2>
+<br>
+<form id="memoryForm">
+<select id="memoryType">
+<option value="💖 Moment">💖 Moment</option>
+<option value="⭐ Win">⭐ Small Win</option>
+<option value="📚 Lesson">📚 Lesson</option>
+<option value="🌈 Dream">🌈 Dream</option>
+<option value="🌱 Goal">🌱 Goal</option>
+</select>
+<textarea id="memoryText" placeholder="Write your memory..." required></textarea>
+<button class="scrap-btn" type="submit">Save</button>
+</form>
+</section>
+<!-- Wall -->
+<section class="paper paper-appear" style="margin-top:40px;">
+<h2>🖼 Your Memory Collage</h2>
+<br>
+<div id="memoryWall" class="memory-wall"></div>
+</section>
+<!-- Quote -->
+<section class="paper paper-appear" style="margin-top:40px;transform:rotate(-1deg);">
+<h2>💌 Reminder</h2>
+<br>
+<p>
+Memories are pieces of who you are.
+Keep the good ones close.
+</p>
+</section>
+</div>
+</body>
+</html>
