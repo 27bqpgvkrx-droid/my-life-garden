@@ -1,0 +1,526 @@
+/* ==========================================
+   MY LIFE GARDEN
+   Scrapbook Design System
+========================================== */
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+:root{
+    --pink:#F7D5E5;
+    --blush:#F2C9D8;
+    --cream:#FFF6E8;
+    --yellow:#F8E6A0;
+    --matcha:#B7C58B;
+    --sage:#D0DEC3;
+    --blue:#D9E8F9;
+    --lavender:#E7DDF8;
+    --coral:#F18B6D;
+    --ink:#403636;
+    --paper-shadow:
+    0 8px 18px rgba(64,54,54,.12);
+    --paper-shadow-lg:
+    0 18px 30px rgba(64,54,54,.18);
+    --radius:24px;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Cairo',sans-serif;
+    overflow-x:hidden;
+    min-height:100vh;
+    position:relative;
+}
+/* ==========================================
+   SCRAPBOOK BACKGROUND
+========================================== */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at 10% 10%, rgba(247,213,229,.5), transparent 20%),
+    radial-gradient(circle at 90% 20%, rgba(231,221,248,.5), transparent 20%),
+    radial-gradient(circle at 50% 90%, rgba(183,197,139,.3), transparent 25%);
+    z-index:-3;
+}
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:
+    linear-gradient(
+      rgba(64,54,54,.03) 1px,
+      transparent 1px
+    );
+    background-size:100% 32px;
+    opacity:.25;
+    pointer-events:none;
+    z-index:-2;
+}
+/* ==========================================
+   TYPOGRAPHY
+========================================== */
+h1{
+    font-family:'Cormorant Garamond',serif;
+}
+h2,h3,h4{
+    font-family:'Playfair Display',serif;
+}
+.page-title{
+    font-size:clamp(3rem,7vw,6rem);
+    text-align:center;
+    margin-bottom:10px;
+}
+.page-subtitle{
+    text-align:center;
+    font-size:1.2rem;
+    opacity:.8;
+}
+/* ==========================================
+   PAGE WRAPPER
+========================================== */
+.page{
+    width:min(1300px,92%);
+    margin:auto;
+    padding:40px 0 100px;
+    position:relative;
+}
+.spread{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+@media(max-width:900px){
+    .spread{
+        grid-template-columns:1fr;
+    }
+}
+/* ==========================================
+   HEADER
+========================================== */
+.scrap-header{
+    position:relative;
+    margin-bottom:70px;
+    text-align:center;
+}
+.scrap-header img{
+    position:absolute;
+    width:140px;
+    pointer-events:none;
+}
+.decor-left{
+    left:-20px;
+    top:-10px;
+}
+.decor-right{
+    right:-20px;
+    top:-10px;
+}
+.decor-bottom{
+    bottom:-40px;
+    left:50%;
+    transform:translateX(-50%);
+}
+/* ==========================================
+   PAPER PIECES
+========================================== */
+.paper{
+    background:var(--cream);
+    border-radius:var(--radius);
+    padding:24px;
+    position:relative;
+    box-shadow:var(--paper-shadow);
+    border:2px dashed rgba(64,54,54,.08);
+}
+.paper::before{
+    content:"";
+    position:absolute;
+    width:90px;
+    height:28px;
+    background:rgba(255,255,255,.6);
+    top:-12px;
+    left:40px;
+    transform:rotate(-5deg);
+    border-radius:6px;
+    backdrop-filter:blur(2px);
+}
+.note{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:var(--paper-shadow);
+    position:relative;
+}
+.note:nth-child(odd){
+    transform:rotate(-2deg);
+}
+.note:nth-child(even){
+    transform:rotate(2deg);
+}
+/* ==========================================
+   SCRAPBOOK NAVIGATION
+========================================== */
+.nav-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+.scrap-link{
+    text-decoration:none;
+    color:var(--ink);
+}
+.nav-piece{
+    min-height:180px;
+    padding:25px;
+    border-radius:24px;
+    position:relative;
+    transition:.35s;
+    box-shadow:var(--paper-shadow);
+    overflow:hidden;
+}
+.nav-piece:hover{
+    transform:
+      translateY(-8px)
+      rotate(1deg);
+}
+.nav-piece h3{
+    margin-top:15px;
+    font-size:1.5rem;
+}
+.nav-piece p{
+    margin-top:10px;
+}
+.pink{background:var(--pink);}
+.blue{background:var(--blue);}
+.yellow{background:var(--yellow);}
+.green{background:var(--sage);}
+.lavender{background:var(--lavender);}
+.coral{background:var(--blush);}
+/* ==========================================
+   BUTTONS
+========================================== */
+button{
+    border:none;
+    cursor:pointer;
+    font-family:'Cairo';
+}
+.scrap-btn{
+    background:var(--pink);
+    padding:12px 22px;
+    border-radius:40px;
+    box-shadow:var(--paper-shadow);
+    transition:.3s;
+}
+.scrap-btn:hover{
+    transform:translateY(-4px);
+}
+/* ==========================================
+   FORMS
+========================================== */
+input,
+textarea,
+select{
+    width:100%;
+    margin-top:10px;
+    margin-bottom:18px;
+    padding:12px 14px;
+    border:none;
+    border-radius:16px;
+    background:white;
+    font-family:'Cairo';
+    color:var(--ink);
+    box-shadow:inset 0 0 0 2px rgba(64,54,54,.05);
+}
+textarea{
+    min-height:120px;
+    resize:vertical;
+}
+/* ==========================================
+   TASK BOARD
+========================================== */
+.task-board{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fill,minmax(260px,1fr));
+    gap:24px;
+}
+.task-card{
+    background:var(--yellow);
+    padding:20px;
+    border-radius:20px;
+    position:relative;
+    box-shadow:var(--paper-shadow);
+}
+.task-card.done{
+    opacity:.55;
+}
+.task-card.done .task-title{
+    text-decoration:line-through;
+    text-decoration-thickness:3px;
+}
+/* ==========================================
+   JOURNAL ENTRIES
+========================================== */
+.entry-card{
+    background:white;
+    padding:22px;
+    border-radius:20px;
+    box-shadow:var(--paper-shadow);
+    margin-bottom:24px;
+    position:relative;
+}
+.entry-card::before{
+    content:"📎";
+    position:absolute;
+    top:-12px;
+    right:12px;
+}
+/* ==========================================
+   MEMORY WALL
+========================================== */
+.memory-wall{
+    position:relative;
+    min-height:700px;
+}
+.polaroid{
+    width:240px;
+    background:white;
+    padding:14px 14px 45px;
+    position:absolute;
+    box-shadow:var(--paper-shadow-lg);
+    border-radius:8px;
+}
+.polaroid h4{
+    margin-top:10px;
+}
+.scrap{
+    position:absolute;
+    width:220px;
+    padding:18px;
+    background:var(--pink);
+    border-radius:16px;
+}
+/* ==========================================
+   CALENDAR
+========================================== */
+.calendar{
+    background:white;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:var(--paper-shadow-lg);
+}
+.calendar-header{
+    background:var(--pink);
+    padding:18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.weekdays,
+.days{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+}
+.weekdays div{
+    padding:15px;
+    text-align:center;
+    font-weight:700;
+}
+.day{
+    min-height:120px;
+    border:1px dashed rgba(64,54,54,.08);
+    padding:8px;
+    position:relative;
+}
+.day-number{
+    font-weight:bold;
+}
+.event-sticker{
+    margin-top:6px;
+    border-radius:12px;
+    padding:4px 8px;
+    font-size:.8rem;
+}
+.personal{background:var(--pink);}
+.study{background:var(--blue);}
+.health{background:var(--sage);}
+.goals{background:var(--yellow);}
+.fun{background:var(--lavender);}
+/* ==========================================
+   GARDEN
+========================================== */
+.garden-wrapper{
+    text-align:center;
+}
+.garden-svg{
+    width:min(550px,100%);
+    margin:auto;
+}
+.growth-box{
+    margin-top:25px;
+    padding:25px;
+    background:white;
+    border-radius:24px;
+    box-shadow:var(--paper-shadow);
+}
+/* ==========================================
+   STICKERS
+========================================== */
+.sticker{
+    position:absolute;
+    z-index:3;
+    pointer-events:none;
+}
+.sticker img{
+    width:100%;
+    height:auto;
+}
+.sticker-sm{
+    width:80px;
+}
+.sticker-md{
+    width:130px;
+}
+.sticker-lg{
+    width:180px;
+}
+/* ==========================================
+   DOODLES
+========================================== */
+.doodle{
+    position:absolute;
+    font-size:2rem;
+    opacity:.7;
+}
+.star{
+    color:var(--coral);
+}
+.heart{
+    color:var(--pink);
+}
+.flower{
+    color:var(--matcha);
+}
+/* ==========================================
+   ANIMATIONS
+========================================== */
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-12px);}
+    100%{transform:translateY(0);}
+}
+@keyframes bounce{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+@keyframes wiggle{
+    0%{transform:rotate(-2deg);}
+    50%{transform:rotate(2deg);}
+    100%{transform:rotate(-2deg);}
+}
+@keyframes paperAppear{
+    from{
+        opacity:0;
+        transform:
+        translateY(30px)
+        rotate(4deg);
+    }
+    to{
+        opacity:1;
+        transform:
+        translateY(0)
+        rotate(0deg);
+    }
+}
+@keyframes sparkle{
+    0%{
+        opacity:.3;
+        transform:scale(.8);
+    }
+    50%{
+        opacity:1;
+        transform:scale(1.2);
+    }
+    100%{
+        opacity:.3;
+        transform:scale(.8);
+    }
+}
+@keyframes plantGrow{
+    from{
+        transform:scale(.75);
+        opacity:.5;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+.float{
+    animation:float 5s ease-in-out infinite;
+}
+.bounce{
+    animation:bounce 3s infinite;
+}
+.wiggle{
+    animation:wiggle 4s infinite;
+}
+.sparkle{
+    animation:sparkle 2s infinite;
+}
+.paper-appear{
+    animation:paperAppear .6s ease;
+}
+.plant-grow{
+    animation:plantGrow .8s ease;
+}
+/* ==========================================
+   RESPONSIVE
+========================================== */
+@media(max-width:1200px){
+    .page-title{
+        font-size:4.5rem;
+    }
+}
+@media(max-width:768px){
+    .page-title{
+        font-size:3.4rem;
+    }
+    .calendar .day{
+        min-height:90px;
+    }
+    .polaroid,
+    .scrap{
+        position:relative;
+        width:100%;
+        margin-bottom:20px;
+    }
+    .memory-wall{
+        display:flex;
+        flex-direction:column;
+        gap:20px;
+    }
+}
+@media(max-width:480px){
+    .page{
+        width:94%;
+    }
+    .nav-piece{
+        min-height:150px;
+    }
+    .page-title{
+        font-size:2.7rem;
+    }
+}
