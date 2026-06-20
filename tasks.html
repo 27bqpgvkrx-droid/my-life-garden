@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tasks • My Life Garden</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+</head>
+<body>
+<!-- Stickers -->
+<div class="sticker sticker-lg float"
+style="top:20px;left:20px;">
+<img src="https://i.ibb.co/S42SxrYN/IMG-0225.png" alt="">
+</div>
+<div class="sticker sticker-md wiggle"
+style="top:120px;right:30px;">
+<img src="https://i.ibb.co/35NtcJCP/IMG-0223.png" alt="">
+</div>
+<div class="page">
+<header class="scrap-header">
+<img class="decor-left float"
+src="https://i.ibb.co/9mXV9pxd/IMG-0215.png">
+<img class="decor-right float"
+src="https://i.ibb.co/ZRjBhP4H/IMG-0218.png">
+<img class="decor-bottom wiggle"
+src="https://i.ibb.co/Xr6VTjNm/IMG-0221.png">
+<h1 class="page-title">
+✅ Tasks Board
+</h1>
+<p class="page-subtitle">
+Sticky notes of your daily life
+</p>
+</header>
+<!-- Navigation -->
+<section class="paper"
+style="text-align:center;margin-bottom:40px;">
+<a href="index.html">
+<button class="scrap-btn">🏠 Home</button>
+</a>
+<a href="planner.html">
+<button class="scrap-btn">📅 Planner</button>
+</a>
+<a href="garden.html">
+<button class="scrap-btn">🌱 Garden</button>
+</a>
+</section>
+<!-- Task Form -->
+<section class="paper paper-appear">
+<h2>➕ Add New Task</h2>
+<br>
+<form id="taskForm">
+<input
+type="text"
+id="taskTitle"
+placeholder="Write a task..."
+required>
+<button class="scrap-btn" type="submit">
+Add Task
+</button>
+</form>
+</section>
+<!-- Task Board -->
+<section class="paper paper-appear"
+style="margin-top:40px;">
+<h2>📌 My Sticky Notes</h2>
+<br>
+<div id="taskBoard" class="task-board">
+<!-- JS renders tasks here -->
+</div>
+</section>
+<!-- Scrap Note -->
+<section class="paper paper-appear"
+style="margin-top:40px;transform:rotate(-1deg);">
+<h2>🌸 Reminder</h2>
+<br>
+<p>
+A task is just a tiny promise
+you make to yourself.
+Keep them small.
+Keep them kind.
+</p>
+</section>
+<!-- Decorations -->
+<div class="doodle star"
+style="position:absolute;top:420px;left:120px;">
+⭐
+</div>
+<div class="doodle heart"
+style="position:absolute;top:650px;right:90px;">
+💛
+</div>
+<div class="doodle flower"
+style="position:absolute;bottom:120px;left:160px;">
+🌸
+</div>
+</div>
+</body>
+</html>
