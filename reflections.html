@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reflections • My Life Garden</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+</head>
+<body>
+<!-- Stickers -->
+<div class="sticker sticker-lg float" style="top:20px;left:20px;">
+<img src="https://i.ibb.co/S42SxrYN/IMG-0225.png">
+</div>
+<div class="sticker sticker-md wiggle" style="top:120px;right:30px;">
+<img src="https://i.ibb.co/35NtcJCP/IMG-0223.png">
+</div>
+<div class="page">
+<header class="scrap-header">
+<img class="decor-left float" src="https://i.ibb.co/9mXV9pxd/IMG-0215.png">
+<img class="decor-right float" src="https://i.ibb.co/ZRjBhP4H/IMG-0218.png">
+<img class="decor-bottom wiggle" src="https://i.ibb.co/Xr6VTjNm/IMG-0221.png">
+<h1 class="page-title">📝 Reflections</h1>
+<p class="page-subtitle">Your personal journal</p>
+</header>
+<!-- Navigation -->
+<section class="paper" style="text-align:center;margin-bottom:40px;">
+<a href="index.html"><button class="scrap-btn">🏠 Home</button></a>
+<a href="garden.html"><button class="scrap-btn">🌱 Garden</button></a>
+<a href="memory-wall.html"><button class="scrap-btn">⭐ Memory Wall</button></a>
+</section>
+<!-- Form -->
+<section class="paper paper-appear">
+<h2>➕ New Reflection</h2>
+<br>
+<form id="reflectionForm">
+<select id="mood">
+<option value="😊">😊 Happy</option>
+<option value="🌿">🌿 Calm</option>
+<option value="🌸">🌸 Soft</option>
+<option value="✨">✨ Inspired</option>
+<option value="🌧️">🌧️ Sad</option>
+</select>
+<textarea id="reflectionText" placeholder="Write your thoughts..." required></textarea>
+<button class="scrap-btn" type="submit">Save</button>
+</form>
+</section>
+<!-- List -->
+<section class="paper paper-appear" style="margin-top:40px;">
+<h2>📖 Your Journal</h2>
+<br>
+<div id="reflectionList"></div>
+</section>
+<!-- Quote -->
+<section class="paper paper-appear" style="margin-top:40px;transform:rotate(-1deg);">
+<h2>💌 Note</h2>
+<br>
+<p>
+Your thoughts are seeds.
+Write them gently.
+They will grow into understanding.
+</p>
+</section>
+</div>
+</body>
+</html>
